@@ -23,7 +23,7 @@ public class PunkteStudierende {
         return "ID: " + id + ", Name: " + name + ", Haus: " + h + ", Autoritat: " + autoritat + ", Punkte: " + punkte;
     }
 
-    public int compareTo(PunkteStudierende o){
+    public int compareTo(PunkteStudierende o) {
         return this.name.compareTo(o.name);
     }
 }

@@ -61,26 +61,26 @@ public class Ubung {
 
         int punkteGryffindor = 0;
         int punkteSlytherin = 0;
-        int punkteHufflepuff=0;
-        int punkteRavenclaw=0;
+        int punkteHufflepuff = 0;
+        int punkteRavenclaw = 0;
 
         for (PunkteStudierende studierende : eintrage) {
-            if (studierende.h==PunkteStudierende.Haus.Gryffindor)
-                punkteGryffindor+=studierende.punkte;
-            else if(studierende.h==PunkteStudierende.Haus.Slytherin)
-                punkteSlytherin+=studierende.punkte;
-            else if(studierende.h==PunkteStudierende.Haus.Hufflepuff)
-                punkteHufflepuff+=studierende.punkte;
-            else if(studierende.h==PunkteStudierende.Haus.Ravenclaw)
-                punkteRavenclaw+=studierende.punkte;
+            if (studierende.h == PunkteStudierende.Haus.Gryffindor)
+                punkteGryffindor += studierende.punkte;
+            else if (studierende.h == PunkteStudierende.Haus.Slytherin)
+                punkteSlytherin += studierende.punkte;
+            else if (studierende.h == PunkteStudierende.Haus.Hufflepuff)
+                punkteHufflepuff += studierende.punkte;
+            else if (studierende.h == PunkteStudierende.Haus.Ravenclaw)
+                punkteRavenclaw += studierende.punkte;
             else throw new RuntimeException("Haus der Studenten ist falsch");
         }
-        try{
-            String daten="Gryffindor#"+ punkteGryffindor+"\n"+
-                    "Ravenclaw#"+punkteRavenclaw+"\n"+
-                    "Slytherin#"+punkteSlytherin+"\n"+
-                    "Hufflepuff#"+punkteHufflepuff+"\n";
-            Files.write(Path.of("ergebnis.txt"),daten.getBytes());
+        try {
+            String daten = "Gryffindor#" + punkteGryffindor + "\n" +
+                    "Ravenclaw#" + punkteRavenclaw + "\n" +
+                    "Slytherin#" + punkteSlytherin + "\n" +
+                    "Hufflepuff#" + punkteHufflepuff + "\n";
+            Files.write(Path.of("ergebnis.txt"), daten.getBytes());
         } catch (IOException e) {
             System.err.println("Fehler beim schreiben in der Datei" + e.getMessage());
         }
